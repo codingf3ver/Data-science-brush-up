@@ -8,6 +8,11 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+*.pickle
+*.DS_Store
+*.zip
+punkt/
+nltk_data/
 build/
 develop-eggs/
 dist/
