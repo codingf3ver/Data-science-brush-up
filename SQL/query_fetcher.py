@@ -5,7 +5,7 @@ import urllib.parse
 from dotenv import load_dotenv
 import os
 
-# Load credentials from .env
+
 load_dotenv()
 
 username = os.getenv('MYSQL_USERNAME')
@@ -57,10 +57,10 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("💻 MySQL Query Runner & Schema Explorer")
+st.title("💻 MySQL Query Runner")
 st.write("👉 Enter any **SQL query** and see results or execution status.")
 
-query = st.text_area("📝 Enter your SQL query here:", height=200)
+query = st.text_area("📝 Enter your SQL query here:", height=150)
 
 if st.button("🚀 Run Query"):
     try:
