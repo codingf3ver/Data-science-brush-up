@@ -11,6 +11,8 @@ __pycache__/
 *.pickle
 *.DS_Store
 *.zip
+*.csv
+
 punkt/
 nltk_data/
 build/
