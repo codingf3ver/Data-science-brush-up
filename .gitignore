@@ -13,6 +13,7 @@ __pycache__/
 *.zip
 *.csv
 *.pkl
+*.docx
 
 punkt/
 nltk_data/
