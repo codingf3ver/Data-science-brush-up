@@ -15,3 +15,4 @@ if __name__ == "__main__":
 
     model_dir = os.environ["SM_MODEL_DIR"]
     joblib.dump(model, f"{model_dir}/model.joblib")
+    

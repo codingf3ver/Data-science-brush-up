@@ -1,0 +1,40 @@
+1. User
+What it is: A user is an individual identity with long-term credentials (username + password or access keys).
+
+Use case: Typically represents a person who interacts with AWS services (e.g., a developer or admin).
+
+Permissions: Directly assigned via policies.
+
+
+2. Group
+What it is: A group is a collection of IAM users.
+
+Use case: Used to manage permissions for multiple users at once (e.g., developers, testers).
+
+Permissions: Attached to the group, automatically inherited by all members.
+
+3. Role
+What it is: A role is an AWS identity with temporary credentials.
+
+Use case: Used for: 
+
+AWS services (like EC2, Lambda) to perform actions on your behalf.
+
+Cross-account access.
+
+Federated users (e.g., users authenticated via Google, Okta, etc.).
+
+Permissions: Granted via policies attached to the role.
+
+How AWS Services Use These:
+EC2 instances can assume IAM roles to access S3, DynamoDB, etc., without hardcoding credentials.
+
+Lambda functions use roles to get permission to access AWS resources.
+
+Users/groups are used mainly for human access (e.g., logging in to the AWS Console or using the CLI).
+
+| Entity | Who/What                 | Credentials | Common Use Case                    | Policy Attachment   |
+| ------ | ------------------------ | ----------- | ---------------------------------- | ------------------- |
+| User   | Human                    | Long-term   | Admins, developers                 | Direct or via Group |
+| Group  | Humans                   | N/A         | Manage multiple users’ permissions | Yes                 |
+| Role   | AWS or External Identity | Temporary   | EC2, Lambda, federated login       | Yes                 |
